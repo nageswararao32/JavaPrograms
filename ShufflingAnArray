@@ -1,0 +1,23 @@
+import java.util.Arrays;
+public class ShufflingAnArray {
+	public static void main(String[] args) {
+		 	
+		int[] arr = {1, 2, 3, 4, 5, 6, 7};
+		for (int m = 1; m <= 10; m++) {
+		int[] shufArr = Arrays.copyOf(arr, 
+		arr.length);
+		for (int i = arr.length-1; i > 0; i--) {
+		int j = (int) Math.floor(Math.random() * 
+		(i + 1));
+		int temp = shufArr[i];
+		shufArr[i] = shufArr[j];
+		shufArr[j] = temp;
+		}
+		for (int i : shufArr) {
+		System.out.print(i+" ");
+		}
+		System.out.println();
+		}
+	}
+
+}
